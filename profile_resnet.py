@@ -16,8 +16,8 @@ sess_options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_AL
 
 # define execution providers
 # Test with CPU first to see full node-by-node execution, then switch to CoreML
-providers = ["CPUExecutionProvider"]
-# providers = ["CoreMLExecutionProvider", "CPUExecutionProvider"]
+# providers = ["CPUExecutionProvider"]
+providers = ["CoreMLExecutionProvider", "CPUExecutionProvider"]
 
 print(f"Initializing session with providers: {providers}")
 session = ort.InferenceSession("resnet18.onnx", sess_options, providers=providers)
